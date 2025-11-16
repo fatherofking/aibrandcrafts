@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer & AI Brand Copywriter | Boost Conversions with AI-Powered Solutions</title>
+    <meta name="description" content="Web developer & AI brand copywriter creating responsive landing pages, SEO-friendly websites, and AI-powered copy that aligns with your brand values. Boost conversions today.">
+    <style>
+        :root {
+            --primary-orange: #FF6B35;
+            --primary-green: #2E8B57;
+            --dark-orange: #E55A2B;
+            --light-green: #4CAF50;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --background: #FFFFFF;
+            --light-bg: #F9F9F9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--background);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span:first-child {
+            color: var(--primary-orange);
+        }
+        
+        .logo span:last-child {
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--primary-orange);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary-orange);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            height: 200px;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        
+        .service-content p {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 0;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(46, 139, 87, 0.9));
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+         content: '"';  /* Single quotes outside, double inside */
+    font-size: 5rem;
+    color: var(--primary-orange);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.2;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--light-text);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-green);
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button-light {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-orange);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid white;
+        }
+        
+        .cta-button-light:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-orange);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-green);
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span>AI</span><span>BrandCraft</span>
+            </div>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact" class="cta-button">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Stop Losing Customers to Generic Websites & Bland Copy</h1>
+            <p>I create responsive landing pages and AI-powered brand copy that speaks directly to your ideal customers, boosting conversions while you focus on what truly matters.</p>
+            <a href="#contact" class="cta-button">Book Your Free Strategy Session</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I Deliver</h2>
+                <p>Comprehensive web development and AI copywriting solutions designed to elevate your brand and drive results</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <div class="service-content">
+                        <h3>High-Converting Landing Pages</h3>
+                        <p>Responsive designs that capture attention and turn visitors into customers, boosting your conversion rates significantly.</p>
+                        <p><strong>Don't let potential customers bounce off your page - capture them with compelling design.</strong></p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <div class="service-content">
+                        <h3>SEO-Friendly Business Websites</h3>
+                        <p>Modern, professional websites optimized for search engines to help you rank higher and attract more qualified traffic.</p>
+                        <p><strong>While competitors struggle with visibility, your site will stand out in search results.</strong></p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✍️</div>
+                    <div class="service-content">
+                        <h3>AI-Powered Brand Copywriting</h3>
+                        <p>Fine-tuned AI that generates personalized copy aligned with your brand values, saving you time and maintaining consistency.</p>
+                        <p><strong>Stop stressing about what to post - let AI handle your content while you focus on business growth.</strong></p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <div class="service-content">
+                        <h3>Website Redesign</h3>
+                        <p>Transform your outdated website into a modern, professional platform that reflects your brand's true potential.</p>
+                        <p><strong>Your current website might be costing you customers without you even realizing it.</strong></p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <div class="service-content">
+                        <h3>Social Media Automation</h3>
+                        <p>Automate your social media content creation with AI that produces posts perfectly aligned with your brand voice.</p>
+                        <p><strong>Imagine having consistent, on-brand content without the daily struggle of creation.</strong></p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <div class="service-content">
+                        <h3>Digital Strategy Coaching</h3>
+                        <p>Learn how the digital space actually works and how to leverage it for your business growth.</p>
+                        <p><strong>Knowledge is power - understand the digital landscape to make informed decisions.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Projects</h2>
+                <p>See how I've helped businesses transform their online presence and drive results</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1551836026-d5c8c1a7d9c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Abicare Hospital Website">
+                    <div class="portfolio-overlay">
+                        <h3>Abicare Hospital</h3>
+                        <p>Medical website with appointment booking system</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Surrogate Father Website">
+                    <div class="portfolio-overlay">
+                        <h3>Surrogate Father</h3>
+                        <p>Consulting service website with lead generation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce Platform">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Platform</h3>
+                        <p>Custom online store with integrated payment system</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Clients Say</h2>
+                <p>Don't just take my word for it - hear from businesses I've helped transform</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Working with this developer transformed our online presence. Our conversion rate increased by 45% after implementing the new landing page and AI-powered copy."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div>
+                            <h4>John Smith</h4>
+                            <p>CEO, Abicare Hospital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The AI copywriting service has saved us countless hours. Now we have consistent, on-brand content without the stress. It's like having a copywriter available 24/7."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div>
+                            <h4>Maria Johnson</h4>
+                            <p>Marketing Director, Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The website redesign exceeded our expectations. Not only does it look professional, but it also ranks higher in search results and converts visitors better."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RD</div>
+                        <div>
+                            <h4>Robert Davis</h4>
+                            <p>Founder, Surrogate Father</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Online Presence?</h2>
+            <p>While you're hesitating, your competitors are already optimizing their websites and content. Don't get left behind in the digital race.</p>
+            <a href="#contact-form" class="cta-button-light">Book Your Free Strategy Session Now</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Limited spots available each month</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AI BrandCraft</h3>
+                    <p>Creating websites and AI-powered copy that converts visitors into customers and builds lasting brand loyalty.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Landing Pages</a></li>
+                        <li><a href="#services">Business Websites</a></li>
+                        <li><a href="#services">AI Copywriting</a></li>
+                        <li><a href="#services">Website Redesign</a></li>
+                        <li><a href="#services">Social Media Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI BrandCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
